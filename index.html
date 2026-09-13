@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <p class="subtitle">Real-time weather information for your location</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search for a city..." 
+                    autocomplete="off"
+                >
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            <button id="locationBtn" class="location-btn">📍 Use My Location</button>
+        </div>
+
+        <div class="alerts">
+            <div id="errorAlert" class="alert alert-error" style="display: none;"></div>
+            <div id="loadingAlert" class="alert alert-loading" style="display: none;">
+                Loading weather data...
+            </div>
+        </div>
+
+        <div class="weather-content">
+            <div class="current-weather" id="currentWeather">
+                <!-- Current weather will be inserted here -->
+            </div>
+
+            <div class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-grid" id="forecastGrid">
+                    <!-- Forecast cards will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="favorites-section" id="favoritesSection" style="display: none;">
+            <h2>📍 Saved Locations</h2>
+            <div class="favorites-grid" id="favoritesGrid">
+                <!-- Favorite locations will be inserted here -->
+            </div>
+        </div>
+
+        <footer>
+            <p>Data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+            <p>Get your free API key at <a href="https://openweathermap.org/api" target="_blank">openweathermap.org/api</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
